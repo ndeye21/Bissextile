@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Annee bissextile</title>
+    <style>
+    input{
+        width: 150px;
+        height: 20px;
+    }
+    </style>
+</head>
+<body>
+    <form>
+       <h2>saisissez une annee!</h2> 
+        <input id="year" type="number" value="" placeholder="YYYY" min="1900" max="2100">
+        <input type="submit" onClick="bis();" />
+      </form>
+      <script>
+          function bis(){
+            var year=document.getElementById('year').value;
+            alert(year);
+        if ((year%4==0 && year%100!=0) || (year %400==0))
+         {alert("true");}
+        else 
+        alert ("false");
+        }
+
+      
+      </script>
+</body>
+</html>

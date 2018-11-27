@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>anagramme</title>
+</head>
+<body>
+    <form action="">
+        <strong> Entrer le premier mot!:</strong>  <input type="text1" id="text1" class="text1" value="">
+        <strong> Entrer le deuxieme mot!:</strong>  <input type="text2" id="text2" class="text2" value="">
+        <input type="submit" onClick="ana();" />
+       </form>
+   
+       <script>
+
+      function ana()
+           {
+               var text1 = document.getElementById("text1").value;
+               var text2 = document.getElementById("text2").value;
+               var mot1= text1.toLowerCase(); 
+               var mot2= text2.toLowerCase(); 
+               var tri1=mot1.split("").sort().join();
+               var tri2=mot2.split("").sort().join();
+
+                if(tri1===tri2){
+                alert("ces mot sont des anagrammes");
+                }
+                    else{
+                        alert("ce ne sont pas des anagrammes");
+                         }
+            
+
+               
+           } 
+           
+               
+       </script>
+</body>
+</html>
